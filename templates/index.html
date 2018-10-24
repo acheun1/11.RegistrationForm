@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Assignment: Registration Form 2018 10 04 Cheung A</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-4"></div>
+            <div class="col-sm-4">
+                <div class="well well-lg">       
+                    <form action="/submitted" method='post'>
+                        <table class="table table-striped">
+                            <tbody>
+                                <tr >
+                                    <td>Email:</td>
+                                    <td>
+                                        <input type="text" name="q0" placeholder="Email@email.com">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>First Name:</td>
+                                    <td>
+                                        <input type="text" name="q1" placeholder="First Name">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Last Name:</td>
+                                    <td>
+                                        <input type="text" name="q2" placeholder="Last Name">
+                                    </td>
+                                </tr>   
+                                <tr>
+                                    <td>Password:</td>
+                                    <td>
+                                        <input type="text" name="q3" placeholder="Password">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Confirm Password:</td>
+                                    <td>
+                                        <input type="text" name="q4" placeholder="Confirm Password">
+                                    </td>
+                                </tr>                                
+                            </tbody>
+                        </table>
+                        <!-- <div class="form-group">
+                            <label for="q3_comment">Comments:</label>
+                            <textarea class="form-control" name="q3_comment" rows="5"></textarea>
+                        </div> -->
+                        <button class="btn btn-primary btn-lg btn-block" type="submit">Submitted</button>
+                    </form>
+                    {% with messages = get_flashed_messages(with_categories=true) %}
+                        {% if messages %}
+                            <ul class=flashes>
+                                {% for category, messages in messages %}
+                                    <li class="{{category}}">{{messages}}</li>
+                                {% endfor %}
+                            </ul>   
+                        {% endif %}
+                    {% endwith %}
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4"></div>
+    </div>
+</body>
+</html>
+
+
